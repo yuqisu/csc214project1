@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PlayGames</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="correct">Correct!</string>
+    <string name="_0">0</string>
+    <string name="guess_the_number_0_100">guess the number(0-100)</string>
+    <string name="input_a_number">input a number</string>
+    <string name="ok">OK</string>
+    <string name="wordtoguess">word</string>
+    <string name="input_a_letter">input a letter</string>
+    <string name="quit">quit</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="project1.csc214.playgames.MainActivity">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/player2Info"
+            android:textSize="20dp"
+            android:id="@+id/text"
+            android:text="please choose a game"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bhotcold"
+            android:layout_margin="5dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:text="hottor or colder"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bhangman"
+            android:layout_margin="5dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/Bhotcold"
+            android:layout_weight="1"
+            android:text="hangman"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/Bhangman"
+            android:id="@+id/Bconnect4"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="connect4"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1Info">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameforFirst"
+                    android:hint="player one name"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_player_confirm_button"
+                    android:layout_weight="1"
+                    android:text="@string/ok"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mainscore1"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="@string/_0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/player1Info"
+            android:id="@+id/player2Info">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameforSecond"
+                    android:hint="player two name"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_player2_confirm_button"
+                    android:layout_weight="1"
+                    android:text="@string/ok"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mainscore2"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:text="@string/_0" />
+
+        </LinearLayout>
+
+
+</RelativeLayout>
