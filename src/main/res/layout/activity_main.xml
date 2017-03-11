@@ -9,15 +9,47 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="project1.csc214.playgames.MainActivity">
+        <FrameLayout
+            android:id="@+id/scoreBoard_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout="@layout/fragment_scoreboard"
+                    class="project1.csc214.playgames.Scoreboard"/>
+        </FrameLayout>
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/scoreBoard_fragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/player1scoremain"
+                    android:text="@string/_0"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_below="@+id/scoreBoard_fragment"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_alignParentEnd="true"
+                    android:id="@+id/player2scoremain"
+                    android:text="@string/_0"
+                    android:textSize="25sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginTop="40dp"
-            android:layout_below="@+id/player2Info"
-            android:textSize="20dp"
+           android:layout_above="@+id/Bhotcold"
+            android:textSize="20sp"
             android:id="@+id/text"
-            android:text="please choose a game"/>
+            android:text="@string/please_choose_a_game"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -26,7 +58,7 @@
             android:layout_margin="5dp"
             android:layout_centerInParent="true"
             android:layout_weight="1"
-            android:text="hottor or colder"/>
+            android:text="@string/hottor_or_colder"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -36,7 +68,7 @@
             android:layout_centerInParent="true"
             android:layout_below="@+id/Bhotcold"
             android:layout_weight="1"
-            android:text="hangman"/>
+            android:text="@string/hangman"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,64 +77,9 @@
             android:id="@+id/Bconnect4"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:text="connect4"/>
+            android:text="@string/connect4"/>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/player1Info">
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nameforFirst"
-                    android:hint="player one name"
-                    android:layout_weight="1"
-                    />
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/name_player_confirm_button"
-                    android:layout_weight="1"
-                    android:text="@string/ok"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/mainscore1"
-                    android:layout_weight="1"
-                    android:textAlignment="textEnd"
-                    android:text="@string/_0" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/player1Info"
-            android:id="@+id/player2Info">
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/nameforSecond"
-                    android:hint="player two name"
-                    android:layout_weight="1"
-                    />
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/name_player2_confirm_button"
-                    android:layout_weight="1"
-                    android:text="@string/ok"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/mainscore2"
-                    android:layout_weight="1"
-                    android:textAlignment="textEnd"
-                    android:text="@string/_0" />
-
-        </LinearLayout>
 
 
 </RelativeLayout>

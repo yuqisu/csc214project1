@@ -8,17 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".NameInput">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HotterColder" />
-        <activity android:name=".Connect4" />
-        <activity android:name=".Hangman" />
-        <activity android:name=".ScoreboardActivity"></activity>
+        <activity android:name=".HotterColder"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Connect4"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Hangman"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

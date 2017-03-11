@@ -11,4 +11,14 @@
     <string name="wordtoguess">word</string>
     <string name="input_a_letter">input a letter</string>
     <string name="quit">quit</string>
+    <string name="input_your_name_and_play_game">Input your name and Play Game</string>
+    <string name="player_one">player one</string>
+    <string name="player2">player2</string>
+    <string name="_8">8</string>
+    <string name="please_choose_a_game">please choose a game</string>
+    <string name="hottor_or_colder">hottor or colder</string>
+    <string name="hangman">hangman</string>
+    <string name="connect4">connect4</string>
+    <string name="play_games">Play Games</string>
+    <string name="player_two_name">player two name</string>
 </resources>

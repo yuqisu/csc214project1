@@ -9,79 +9,231 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="project1.csc214.playgames.Connect4">
-
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/scoreBoard_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/board"
-        android:orientation="vertical"
-        android:layout_above="@+id/buttons">
-        <include layout="@layout/table_row_8" android:id="@+id/row1"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row2"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row3"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row4"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row5"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row6"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row7"/>
-        <include layout="@layout/table_row_8" android:id="@+id/row8"/>
-    </LinearLayout>
+        android:layout_height="wrap_content">
 
+        <fragment
+            class="project1.csc214.playgames.Scoreboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_scoreboard"/>
+    </FrameLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/scoreBoard_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player1scorec4"
+        android:text="@string/_0"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_below="@+id/scoreBoard_fragment"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/player2scorec4"
+        android:text="@string/_0"
+        android:textSize="25sp" />
     <LinearLayout
+        android:layout_above="@+id/Connect4_board"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttons"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="60dp"
+        android:layout_height="wrap_content">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button1"/>
+            android:id="@+id/cell0"
+            android:layout_weight="1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button2"/>
+            android:id="@+id/cell1"
+            android:layout_weight="1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button3"/>
+            android:id="@+id/cell2"
+            android:layout_weight="1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button4"/>
+            android:id="@+id/cell3"
+            android:layout_weight="1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button5"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button6"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button7"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/button8"/>
-
+            android:id="@+id/cell4"
+            android:layout_weight="1"/>
     </LinearLayout>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:columnCount="5"
+            android:rowCount="5"
+            android:id="@+id/Connect4_board">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell20"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell21"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell22"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell23"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell24"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell15"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell16"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell17"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell18"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell19"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell10"/>
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/board"
+                android:id="@+id/cell11"/>
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/board"
+                android:id="@+id/cell12"/>
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/board"
+                android:id="@+id/cell13"/>
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/board"/>
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/board"
+                android:id="@+id/cell5"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell6"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell7"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell8"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                android:id="@+id/cell9"/>
+            <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/board" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+               />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board"
+                />
 
+
+
+
+
+
+
+
+
+        </GridLayout>
         <Button
             android:id="@+id/quitforC4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/quit"
             android:layout_centerHorizontal="true"
-            android:layout_above="@+id/board" />
+            android:layout_alignParentBottom="true"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="invisible">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/board_green"
+        android:id="@+id/cellplayer1"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/board_red"
+        android:id="@+id/cellplayer2"/>
+</LinearLayout>
 </RelativeLayout>
